@@ -1,0 +1,36 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Python virtual environment
+Lib/
+Scripts/
+Include/
+share/
+pyvenv.cfg
+
+# ChromaDB
+chromaDB/
+chroma_db/
+
+# Uploaded PDFs
+static/uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+run
+
+.env

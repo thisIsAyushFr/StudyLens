@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>StudyLens — Ask your notes anything</title>
+<meta name="description" content="Upload your notes. Ask a question. StudyLens finds the exact lines that answer it, and shows you where it found them.">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a class="masthead" href="#top">STUDYLENS</a>
+  <span class="issue-tag">VOL.&nbsp;01 — ISSUE&nbsp;03</span>
+  <div class="nav-links">
+    <a href="#spreads">What it does</a>
+    <a href="#how">How it works</a>
+    <a href="#faq">FAQ</a>
+    <a class="nav-cta pressable" href="index.html">Open app</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero blk-cobalt" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="kicker">THE STUDY TOOL THAT SHOWS ITS WORK</p>
+        <h1>ASK YOUR<br>NOTES<br><span class="hl-word">ANYTHING.</span></h1>
+        <p class="lede">
+          Upload a PDF or your typed notes. StudyLens finds the exact lines
+          that answer your question — and hands you the receipt.
+        </p>
+        <div class="hero-actions">
+          <a href="index.html" class="btn btn-lime pressable magnetic">Try StudyLens</a>
+          <button class="btn btn-outline pressable" id="scrollToHow" type="button">See how it works</button>
+        </div>
+      </div>
+
+      <div class="hero-demo-wrap">
+        <div class="stamp" aria-hidden="true">100%<br>SOURCED</div>
+        <div class="hero-demo" id="heroDemo">
+          <p class="demo-label">BIO_NOTES.PDF — PG.&nbsp;2</p>
+          <p class="demo-text">
+            Mitochondria are membrane-bound organelles that
+            <span class="hl" id="hlPhrase">generate most of a cell's ATP through oxidative phosphorylation</span>,
+            using enzymes embedded in the electron transport chain.
+          </p>
+          <div class="demo-divider"></div>
+          <div class="demo-question">
+            <span id="typedQuestion"></span><span class="caret" id="caret">|</span>
+          </div>
+          <div class="demo-answer" id="demoAnswer">
+            <p id="answerText"></p>
+            <div class="demo-source"><span class="dot"></span>BIO_NOTES.PDF, P.2</div>
+          </div>
+        </div>
+        <button class="replay-btn pressable" id="replayBtn" type="button" aria-label="Replay demo">↻</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE TICKER ============ -->
+  <div class="ticker blk-black" aria-hidden="true">
+    <div class="ticker-track">
+      <span>UPLOAD YOUR NOTES</span><span class="star">✦</span>
+      <span>ASK A QUESTION</span><span class="star">✦</span>
+      <span>GET A SOURCED ANSWER</span><span class="star">✦</span>
+      <span>UPLOAD YOUR NOTES</span><span class="star">✦</span>
+      <span>ASK A QUESTION</span><span class="star">✦</span>
+      <span>GET A SOURCED ANSWER</span><span class="star">✦</span>
+    </div>
+  </div>
+
+  <!-- ============ STAT ============ -->
+  <section class="stat blk-lime">
+    <div class="section-inner stat-inner">
+      <div class="stat-number"><span id="statCount">0</span><span class="stat-suffix">+</span></div>
+      <p class="stat-label">words of lecture notes StudyLens can search through before you'd finish reading the first paragraph.</p>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE SPREADS ============ -->
+  <section id="spreads">
+    <div class="spread blk-coral">
+      <div class="section-inner spread-inner">
+        <span class="spread-word">UPLOAD</span>
+        <div class="spread-copy">
+          <h2>Give it what you've got.</h2>
+          <p>A PDF of lecture slides, a scanned handout, a plain .txt file of your own typed notes. Nothing pulled from the internet — just the material you actually have.</p>
+        </div>
+      </div>
+    </div>
+    <div class="spread blk-black">
+      <div class="section-inner spread-inner reverse">
+        <div class="spread-copy">
+          <h2>Ask it the way you'd ask a classmate.</h2>
+          <p>"Wait, what's the difference between X and Y again?" No keywords to guess, no need to quote the material back at it.</p>
+        </div>
+        <span class="spread-word">ASK</span>
+      </div>
+    </div>
+    <div class="spread blk-cobalt">
+      <div class="section-inner spread-inner">
+        <span class="spread-word">CITE</span>
+        <div class="spread-copy">
+          <h2>Every answer points back to its source.</h2>
+          <p>You get the answer and the exact passage it came from — so you can trust it, or check it yourself in one glance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how blk-white" id="how">
+    <div class="section-inner">
+      <h2 class="how-heading">How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Upload your notes</h3>
+          <p>StudyLens reads it in and gets ready — usually in a few seconds.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Ask a question</h3>
+          <p>Type it however it comes to mind. Plain language works fine.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Get a sourced answer</h3>
+          <p>The passage that actually answers you, handed over alongside the answer itself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PULL QUOTE ============ -->
+  <section class="quote blk-coral">
+    <div class="section-inner">
+      <p class="quote-text">"I stopped rereading my notes and started asking them questions instead."</p>
+      <p class="quote-attr">— a computer science junior, three days before finals</p>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq blk-white" id="faq">
+    <div class="section-inner">
+      <h2 class="how-heading">Questions, answered</h2>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q pressable" type="button" aria-expanded="false">
+            <span>What file types does it accept?</span><span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>PDFs and plain text files for now — scanned handouts work as long as the text is selectable.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q pressable" type="button" aria-expanded="false">
+            <span>Is my data private?</span><span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Your notes are used only to answer your own questions. They're not used to train anything, and you can remove them anytime.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q pressable" type="button" aria-expanded="false">
+            <span>What if it can't find an answer?</span><span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>It says so, plainly, instead of guessing. StudyLens only answers from what's actually in your notes.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q pressable" type="button" aria-expanded="false">
+            <span>Does it work for any subject?</span><span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Yes — it reads whatever you upload, so it's as good for organic chemistry as it is for 19th-century history.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="cta-band blk-lime">
+    <div class="section-inner cta-inner">
+      <h2>Your notes already<br>have the answer.</h2>
+      <a href="index.html" class="btn btn-black btn-lg pressable magnetic">Try StudyLens</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="blk-black">
+  <div class="section-inner footer-grid">
+    <div class="footer-col">
+      <span class="masthead small">STUDYLENS</span>
+      <p>Built for reading less and understanding more.</p>
+    </div>
+    <div class="footer-col">
+      <span class="footer-heading">Navigate</span>
+      <a href="#top">Top</a>
+      <a href="#spreads">What it does</a>
+      <a href="#how">How it works</a>
+      <a href="index.html">Open app</a>
+    </div>
+    <div class="footer-col">
+      <span class="footer-heading">Colophon</span>
+      <p class="mono-small">Set in a condensed grotesk &amp; a transitional serif. Vol. 01.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="home.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>StudyLens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>StudyLens</h1>
+
+        <div class="upload-container">
+            <label for="fileInput" class="file-label">Choose files</label>
+            <input type="file" id="fileInput" accept=".pdf" multiple>
+            <button class="upload-btn pressable" id="uploadBtn" type="button">Upload</button>
+            <span id="uploadStatus" aria-live="polite"></span>
+        </div>
+    </header>
+
+    <main class="chat-container" id="chatBox" role="log" aria-live="polite" aria-label="Conversation with StudyLens">
+        <div class="message-wrapper ai-wrapper">
+            <div class="message ai-msg">
+                Upload your notes above, and ask me anything about them.
+            </div>
+        </div>
+    </main>
+
+    <button class="jump-btn pressable" id="jumpBtn" type="button" aria-label="Jump to latest message" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16.5 4.5 9l1.4-1.4L12 13.7l6.1-6.1L19.5 9z"/></svg>
+    </button>
+
+    <!-- Study controls -->
+    <footer class="input-container">
+        <div class="input-box">
+            <select id="documentSelect" class="doc-select" aria-label="Select document to ask about">
+                <option value="" disabled selected>No documents yet</option>
+            </select>
+
+            <input
+                type="text"
+                id="queryInput"
+                placeholder="Ask a question about your notes"
+                aria-label="Ask a question about your notes"
+            >
+
+            <button
+                class="send-btn pressable"
+                id="sendBtn"
+                type="button"
+                aria-label="Send question"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+
+        <button
+            class="quiz-btn pressable"
+            id="quizBtn"
+            type="button"
+        >
+            Quiz Me
+        </button>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
