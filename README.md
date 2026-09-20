@@ -702,9 +702,6 @@ Open a pull request from your feature branch to the main branch.
 # License
 
 This project is currently intended as a personal and educational project.
-
-If the project is released as open source, add an appropriate license such as the MIT License.
-
 ---
 
 # Author
