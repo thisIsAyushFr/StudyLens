@@ -121,7 +121,7 @@ function renderSources(sources) {
     }
 
     return `
-        <div class="sources">
+        <div class="sources-container">
             <div class="sources-title">Sources</div>
 
             ${sources.map((s, i) => {
@@ -140,17 +140,24 @@ function renderSources(sources) {
                         href="/uploads/${encodedFilename}#page=${page}"
                         target="_blank"
                         rel="noopener noreferrer"
+                        style="display:block; text-decoration:none; color:inherit;"
                     >
                         <strong>
-                            Source ${i + 1}
-                            · ${escapeHtml(filename)}
-                            · Page ${escapeHtml(page)}
+                            Source ${i + 1} · Page ${escapeHtml(page)}
                         </strong>
+
+                        <div>
+                            ${escapeHtml(filename)}
+                        </div>
 
                         <div>
                             ${escapeHtml(
                                 s.content.substring(0, 150)
                             )}...
+                        </div>
+
+                        <div>
+                            Open page →
                         </div>
                     </a>
                 `;
